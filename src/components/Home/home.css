@@ -1,0 +1,69 @@
+.home-page{
+    background-image: url(/src/imgs/home/home.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+.caption{
+    z-index: 2;
+    color: white;
+    position: relative;
+   
+}
+.caption h1{ 
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+}
+.light-bg::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, .5);
+}
+
+.typewriter h1 {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    letter-spacing: .15em;
+    animation: typing 5s steps(120, end), blink-caret .75s step-end infinite;
+    -webkit-animation: typing 5s steps(120, end), blink-caret .75s step-end infinite;
+}
+
+/* Typing Animation */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 90%
+    }
+}
+
+/* Blinking Cursor Effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+/* Looping Animation */
+.typewriter h1 {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 5s steps(120, end) infinite;
+    -webkit-animation: typing 5s steps(120, end) infinite;
+}
